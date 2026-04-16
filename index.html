@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿澈的学习结界</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 小星星装饰 -->
+    <div class="floating-stars" aria-hidden="true">
+        <span class="star" style="top:8%;left:5%">✦</span>
+        <span class="star" style="top:15%;right:10%">✧</span>
+        <span class="star" style="top:45%;left:8%">✦</span>
+        <span class="star" style="top:70%;right:6%">✧</span>
+        <span class="star" style="top:85%;left:15%">✦</span>
+        <span class="star" style="top:30%;right:20%">✧</span>
+        <span class="star" style="top:55%;left:3%">✦</span>
+        <span class="star" style="top:92%;right:15%">✧</span>
+    </div>
+
+    <!-- 导航 -->
+    <nav class="navbar">
+        <div class="nav-logo">阿澈の结界 <span class="sparkle">✨</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero">首页</a></li>
+            <li><a href="#study">学习区</a></li>
+            <li><a href="#math">错题本</a></li>
+            <li><a href="#anime">追番区</a></li>
+            <li><a href="#future">高考后</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- ===== 1. 首屏 ===== -->
+    <section id="hero" class="hero">
+        <div class="hero-speech-bubble">
+            <p>欢迎来到我的结界～</p>
+        </div>
+        <h1 class="hero-name">林澈</h1>
+        <p class="hero-tag">高三 · 青岛五十八中 · 学习/追番并行中</p>
+        <p class="hero-quote">「在刷题和追番之间反复横跳，但学习结界已开。」</p>
+        <div class="hero-buttons">
+            <a href="#study" class="btn btn-pink">📚 学习区</a>
+            <a href="#anime" class="btn btn-purple">🎬 追番区</a>
+        </div>
+        <div class="scroll-hint">
+            <span>▽</span>
+        </div>
+    </section>
+
+    <!-- ===== 2. 学习冲刺区 ===== -->
+    <section id="study" class="section">
+        <h2 class="section-title">📖 最后冲刺 · 每日打卡</h2>
+        <p class="section-desc">高考倒计时，每一天都不能浪费！颜色越深代表学习越久哦～</p>
+
+        <div class="calendar-legend">
+            <span class="legend-item"><span class="dot gray"></span>未打卡</span>
+            <span class="legend-item"><span class="dot pink"></span>＜2小时</span>
+            <span class="legend-item"><span class="dot purple"></span>≥3小时</span>
+        </div>
+
+        <div class="calendar">
+            <div class="cal-header">
+                <span>周一</span><span>周二</span><span>周三</span><span>周四</span><span>周五</span><span>周六</span><span>周日</span>
+            </div>
+            <div class="cal-body">
+                <!-- 第一周 -->
+                <div class="cal-day purple" data-tip="4月7日 · 学习4h · 刷完两套数学卷">7</div>
+                <div class="cal-day purple" data-tip="4月8日 · 学习3.5h · 英语阅读专项">8</div>
+                <div class="cal-day pink" data-tip="4月9日 · 学习1.5h · 晚上追番了…">9</div>
+                <div class="cal-day purple" data-tip="4月10日 · 学习5h · 物理电磁学">10</div>
+                <div class="cal-day purple" data-tip="4月11日 · 学习3h · 化学有机">11</div>
+                <div class="cal-day purple" data-tip="4月12日 · 学习6h · 全科模拟">12</div>
+                <div class="cal-day pink" data-tip="4月13日 · 学习2h · 休息日">13</div>
+                <!-- 第二周 -->
+                <div class="cal-day purple" data-tip="4月14日 · 学习4h · 数学圆锥曲线">14</div>
+                <div class="cal-day gray" data-tip="4月15日 · 今天加油！">15</div>
+                <div class="cal-day gray">16</div>
+                <div class="cal-day gray">17</div>
+                <div class="cal-day gray">18</div>
+                <div class="cal-day gray">19</div>
+                <div class="cal-day gray">20</div>
+            </div>
+        </div>
+
+        <!-- 学习统计小卡片 -->
+        <div class="stat-cards">
+            <div class="stat-card">
+                <div class="stat-number">4<span class="stat-unit">天</span></div>
+                <div class="stat-label">本周≥3h</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">26.5<span class="stat-unit">h</span></div>
+                <div class="stat-label">本周总学习</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">52<span class="stat-unit">天</span></div>
+                <div class="stat-label">距高考</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 3. 数学错题本 ===== -->
+    <section id="math" class="section section-alt">
+        <h2 class="section-title">🧮 最近搞懂的数学题</h2>
+        <p class="section-desc">错题不可怕，搞懂了就是赚了！</p>
+
+        <div class="mistake-list">
+            <div class="mistake-card">
+                <div class="mistake-header">
+                    <span class="mistake-tag">立体几何</span>
+                    <span class="mistake-date">4月12日</span>
+                </div>
+                <h3 class="mistake-title">外接球问题</h3>
+                <div class="speech-bubble">
+                    <p>💡 关键找球心在截面圆圆心正上方，画辅助线把空间问题降维到平面！</p>
+                </div>
+            </div>
+
+            <div class="mistake-card">
+                <div class="mistake-header">
+                    <span class="mistake-tag">圆锥曲线</span>
+                    <span class="mistake-date">4月10日</span>
+                </div>
+                <h3 class="mistake-title">焦点弦长公式应用</h3>
+                <div class="speech-bubble">
+                    <p>💡 别硬算！先用定义转化，再用韦达定理，焦点弦=2p/(sin²θ) 直接套！</p>
+                </div>
+            </div>
+
+            <div class="mistake-card">
+                <div class="mistake-header">
+                    <span class="mistake-tag">导数</span>
+                    <span class="mistake-date">4月8日</span>
+                </div>
+                <h3 class="mistake-title">含参不等式恒成立</h3>
+                <div class="speech-bubble">
+                    <p>💡 分离参数 → 求最值！别忘了检查端点和特殊情况，分类讨论别漏掉！</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 4. 追番/休息区 ===== -->
+    <section id="anime" class="section">
+        <h2 class="section-title">🍵 休息时在看</h2>
+        <p class="section-desc">学习之余，追番是最好的充电方式～</p>
+
+        <div class="anime-grid">
+            <div class="anime-card">
+                <div class="anime-cover">
+                    <div class="anime-emoji">⚔️</div>
+                    <div class="anime-badge">热播中</div>
+                </div>
+                <div class="anime-info">
+                    <h3>葬送的芙莉莲</h3>
+                    <p class="anime-comment">「一千年太短，但和你在一起的日子刚刚好。」看完只想珍惜当下。</p>
+                    <div class="anime-progress">
+                        <div class="progress-label">
+                            <span>进度</span>
+                            <span>8 / 28 集</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill pink" style="width: 28.5%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anime-card">
+                <div class="anime-cover cover-purple">
+                    <div class="anime-emoji">🌌</div>
+                    <div class="anime-badge">已完结</div>
+                </div>
+                <div class="anime-info">
+                    <h3>孤独摇滚!</h3>
+                    <p class="anime-comment">「社恐吉他少女的成长之路，笑着笑着就哭了。」波奇酱太真实了！</p>
+                    <div class="anime-progress">
+                        <div class="progress-label">
+                            <span>进度</span>
+                            <span>12 / 12 集</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill purple" style="width: 100%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="anime-tip speech-bubble-alt">
+            <p>📌 追番守则：每天最多2集，模考周只看1集！自律才能自由～</p>
+        </div>
+    </section>
+
+    <!-- ===== 5. 数据科学预科班 ===== -->
+    <section id="future" class="section section-alt">
+        <h2 class="section-title">🚀 高考后的计划</h2>
+        <p class="section-desc">高考不是终点，是新的起点！</p>
+
+        <div class="future-card">
+            <div class="future-badge">已报名 ✅</div>
+            <h3>数据科学预科班</h3>
+            <div class="future-items">
+                <div class="future-item">
+                    <span class="item-icon">🎯</span>
+                    <span>最感兴趣：<strong>数学模型应用</strong> & <strong>Openclaw实战</strong></span>
+                </div>
+                <div class="future-item">
+                    <span class="item-icon">🤖</span>
+                    <span>目标：<strong>用AI写一个自动整理错题的脚本</strong></span>
+                </div>
+                <div class="future-item">
+                    <span class="item-icon">📅</span>
+                    <span>开始时间：高考结束后 7月初</span>
+                </div>
+            </div>
+
+            <div class="future-excitement">
+                <div class="progress-label">
+                    <span>期待值</span>
+                    <span class="excitement-text">100% 🔥🔥🔥</span>
+                </div>
+                <div class="progress-bar excitement">
+                    <div class="progress-fill excitement-fill"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="future-quote speech-bubble">
+            <p>「等高考结束，我也要写出能自动帮学弟学妹整理错题的AI！」</p>
+        </div>
+    </section>
+
+    <!-- ===== 6. 页脚 ===== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-email">📧 che.lin@qd58.edu · 青岛五十八中</p>
+            <p class="footer-sub">结界展开中 ✨</p>
+            <div class="footer-deco">
+                <span>🌸</span><span>📖</span><span>⚔️</span><span>🤖</span><span>🌸</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
